@@ -8,6 +8,8 @@ Prerequisites:
 * all packages installed from ``requirements.txt``
 * ``siege`` utility, which can be installed on Ubuntu with ``sudo apt install siege``
 
+Benchmark results:
+
 1. Synchronous HTTP server (``1_sync.py``)::
 
     $ ./run_benchmark.sh 127.0.0.1:8000
@@ -92,3 +94,6 @@ Prerequisites:
     Failed transactions:           0
     Longest transaction:        0.72
     Shortest transaction:       0.00
+
+A short conclusion is that ``multiprocessing`` approach shows the best results,
+but more thorough testing may show more hidden details.
