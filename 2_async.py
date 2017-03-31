@@ -7,7 +7,11 @@ import tornado.web
 from tornado import gen
 
 
+TEMPLATE = "<html><head><title>Test</title></head><body><p>Test</p></body></html>"
+
+
 class AsyncUser(object):
+
     @return_future
     def save(self, callback=None):
         time.sleep(0.02)
@@ -41,9 +45,9 @@ class UserHandler(tornado.web.RequestHandler):
     def get(self):
         user = AsyncUser()
         response = yield (user.save())
-
         response2 = yield (user.send_email())
         response3 = yield (user.social_api())
+        self.write(TEMPLATE)
         self.finish()
 
 

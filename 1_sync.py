@@ -4,7 +4,11 @@ import SimpleHTTPServer
 import SocketServer
 
 
+TEMPLATE = "<html><head><title>Test</title></head><body><p>Test</p></body></html>"
+
+
 class User(object):
+
     def save(self):
         time.sleep(0.2)
 
@@ -21,7 +25,7 @@ class SyncServer(SimpleHTTPServer.SimpleHTTPRequestHandler):
         user.save()
         user.send_email()
         user.social_api()
-        self.send_response(200, message='ok')
+        self.send_response(200, message=TEMPLATE)
         self.end_headers()
 
 

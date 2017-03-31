@@ -6,6 +6,7 @@ import tornado.web
 from tornado import gen
 
 
+TEMPLATE = "<html><head><title>Test</title></head><body><p>Test</p></body></html>"
 MAX_WORKERS = 4
 
 
@@ -42,7 +43,8 @@ class UserHandler(tornado.web.RequestHandler):
 
     @gen.coroutine
     def get(self):
-        self.executor.submit(background_task)
+        res = yield self.executor.submit(background_task)
+        self.write(TEMPLATE)
         self.finish()
 
 

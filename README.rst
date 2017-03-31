@@ -1,6 +1,11 @@
 Benchmarks of running a long-term process within an HTTP server
 ===============================================================
 
+Inspired by, and code is taken partly from these linkes:
+
+* http://www.maigfrga.ntweb.co/asynchronous-programming-tornado-framework/
+* https://gist.github.com/methane/2185380
+
 Below are performance benchmark results for several implementations of an HTTP server which runs a long-term task. All tests were made on a laptop with Intel Core i7-5500U 2.40GHz processor having 2 cores, and 16Gb RAM. To run a test, execute ``python 1_sync.py`` (or any other Python file which starts with a number), and in a separate console execute the benchmark script with an appropriate hostname and port (see examples).
 
 Prerequisites:
@@ -96,4 +101,89 @@ Benchmark results:
     Shortest transaction:       0.00
 
 A short conclusion is that ``multiprocessing`` approach shows the best results,
-but more thorough testing may show more hidden details.
+but more thorough testing may show differences in memory consumption and
+performance change for threads with I/O or network operations, as they may
+not use GIL.
+
+**Update.** Added returning a small piece of HTML, and the results have changed, see below.
+In short, multiprocessing no longer shows a significant advantage over
+threading approach, see below::
+
+    $ ./run_benchmark.sh 127.0.0.1:8000
+    ** SIEGE 4.0.2
+    ** Preparing 25 concurrent users for battle.
+    The server is now under siege...[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+
+    Lifting the server siege...
+    Transactions:                 21 hits
+    Availability:              75.00 %
+    Elapsed time:              59.66 secs
+    Data transferred:           0.00 MB
+    Response time:             16.95 secs
+    Transaction rate:           0.35 trans/sec
+    Throughput:                 0.00 MB/sec
+    Concurrency:                5.97
+    Successful transactions:      21
+    Failed transactions:           7
+    Longest transaction:       22.42
+    Shortest transaction:       0.00
+
+    $ ./run_benchmark.sh 127.0.0.1:8001
+    ** SIEGE 4.0.2
+    ** Preparing 25 concurrent users for battle.
+    The server is now under siege...
+    Lifting the server siege...
+    Transactions:                211 hits
+    Availability:             100.00 %
+    Elapsed time:              59.54 secs
+    Data transferred:           0.01 MB
+    Response time:              5.13 secs
+    Transaction rate:           3.54 trans/sec
+    Throughput:                 0.00 MB/sec
+    Concurrency:               18.19
+    Successful transactions:     211
+    Failed transactions:           0
+    Longest transaction:        5.41
+    Shortest transaction:       0.00
+
+    $ ./run_benchmark.sh 127.0.0.1:8002
+    ** SIEGE 4.0.2
+    ** Preparing 25 concurrent users for battle.
+    The server is now under siege...
+    Lifting the server siege...
+    Transactions:                844 hits
+    Availability:             100.00 %
+    Elapsed time:              59.40 secs
+    Data transferred:           0.06 MB
+    Response time:              1.73 secs
+    Transaction rate:          14.21 trans/sec
+    Throughput:                 0.00 MB/sec
+    Concurrency:               24.61
+    Successful transactions:     844
+    Failed transactions:           0
+    Longest transaction:        1.97
+    Shortest transaction:       0.28
+
+    $ ./run_benchmark.sh 127.0.0.1:8003
+    ** SIEGE 4.0.2
+    ** Preparing 25 concurrent users for battle.
+    The server is now under siege...
+    Lifting the server siege...
+    Transactions:                840 hits
+    Availability:             100.00 %
+    Elapsed time:              59.06 secs
+    Data transferred:           0.06 MB
+    Response time:              1.73 secs
+    Transaction rate:          14.22 trans/sec
+    Throughput:                 0.00 MB/sec
+    Concurrency:               24.64
+    Successful transactions:     840
+    Failed transactions:           0
+    Longest transaction:        1.99
+    Shortest transaction:       0.30
