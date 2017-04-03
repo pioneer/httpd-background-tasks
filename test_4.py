@@ -1,28 +1,22 @@
-import time
+import sys
 from concurrent.futures import ProcessPoolExecutor
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
 from tornado import gen
+import settings
+import tasks
 
 
-TEMPLATE = "<html><head><title>Test</title></head><body><p>Test</p></body></html>"
-MAX_WORKERS = 4
-
-
-class User(object):
-
-    def save(self):
-        time.sleep(0.02)
-
-    def send_email(self):
-        time.sleep(0.06)
-
-    def social_api(self):
-        time.sleep(0.2)
+try:
+    task_name = sys.argv[1]
+except IndexError:
+    task_name = "sleep_sync"
+task = tasks.get_task(task_name)
 
 
 class Application(tornado.web.Application):
+
     def __init__(self):
         handlers = [
             (r"/", UserHandler),
@@ -31,28 +25,24 @@ class Application(tornado.web.Application):
 
 
 def background_task():
-    user = User()
-    user.save()
-    user.send_email()
-    user.social_api()
+    task()
 
 
 class UserHandler(tornado.web.RequestHandler):
 
-    executor = ProcessPoolExecutor(max_workers=MAX_WORKERS)
+    executor = ProcessPoolExecutor(max_workers=settings.MAX_WORKERS)
 
     @gen.coroutine
     def get(self):
         res = yield self.executor.submit(background_task)
-        self.write(TEMPLATE)
+        self.write(settings.TEMPLATE)
         self.finish()
 
 
 def main():
     http_server = tornado.httpserver.HTTPServer(Application())
-    PORT = 8003
-    print "serving at port", PORT
-    http_server.listen(PORT)
+    print "serving at port", settings.PORT
+    http_server.listen(settings.PORT)
     tornado.ioloop.IOLoop.instance().start()
 
 
