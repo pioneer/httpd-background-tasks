@@ -6,7 +6,21 @@ Inspired by, and code is taken partly from these linkes:
 * http://www.maigfrga.ntweb.co/asynchronous-programming-tornado-framework/
 * https://gist.github.com/methane/2185380
 
-Below are performance benchmark results for several implementations of an HTTP server which runs a long-term task. All tests were made on a laptop with Intel Core i7-5500U 2.40GHz processor having 2 cores, and 16Gb RAM. To run a test, execute ``python 1_sync.py`` (or any other Python file which starts with a number), and in a separate console execute the benchmark script with an appropriate hostname and port (see examples).
+Below are performance benchmark results for several implementations of an HTTP server which runs a long-term task. All tests were made on a laptop with Intel Core i7-5500U 2.40GHz processor having 2 cores, and 16Gb RAM. To run a test, execute ``fab run_server:1`` (or use any other test number from 1 to 4), and in a separate console execute the benchmark ``fab run_load_test``. You may specify a background task name to be used with a test server, like ``fab run_server:3,network_sync``. Below is the full list of test servers and tasks.
+
+Test servers
+------------
+1. Synchronous HTTP server
+2. Asynchronous Tornado server, the background task runs in the same thread as the event loop
+3. Asynchronous Tornado server, an approach using ``threading`` module, the background task runs in a different thread taken from ``ThreadExecutor``
+4. Asynchronous Tornado server, an approach using ``multiprocessing`` module, the background task runs in a different process taken from ``ProcessExecutor``
+
+Background tasks
+----------------
+* *None specified* -- equals to ``sleep_sync`` -- a blocking task which basically just sleeps and returns some HTML (imitating a website user activity)
+* ``sleep_async`` -- the same as above, but returns a future and can be embedded in a Tornado event loop
+* ``network_sync`` -- fetches a content from an URL somewhere in the network and returns it (for the tests below "google.com" and "localhost" were used, with local Apache in the latter case)
+* ``file_sync`` -- reads a file from the filesystem and returns its content
 
 Prerequisites:
 
@@ -14,176 +28,28 @@ Prerequisites:
 * ``siege`` utility, which can be installed on Ubuntu with ``sudo apt install siege``
 
 Benchmark results:
+------------------
 
-1. Synchronous HTTP server (``1_sync.py``)::
+=============================================  ============  ================  =============
+\                                              Availability  Transaction rate  Response time
+---------------------------------------------  ------------  ----------------  -------------
+Sync                                           96.77 %       3.55 trans/sec    1.94 secs
+Async                                          100.00 %      3.54 trans/sec    5.38 secs
+Async, threading                               100.00 %      14.20 trans/sec   1.73 secs
+Async, multiprocessing                         100.00 %      14.22 trans/sec   1.73 secs
+Async, threading, network, google.com          100.00 %      3.29 trans/sec    7.09 secs
+Async, multiprocessing, network, google.com    100.00 %      3.16 trans/sec    7.42 secs
+Async, threading, network, local Apache        100.00 %      164.64 trans/sec  0.15 secs
+Async, multiprocessing, network, local Apache  100.00 %      274.92 trans/sec  0.09 secs
+Async, threading, file                         100.00 %      647.20 trans/sec  0.04 secs
+Async, multiprocessing, file                   100.00 %      569.03 trans/sec  0.04 secs
+=============================================  ============  ================  =============
 
-    $ ./run_benchmark.sh 127.0.0.1:8000
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+**Note:** Full results can be found in ``results.txt`` file.
 
-    Lifting the server siege...
-    Transactions:                 21 hits
-    Availability:              80.77 %
-    Elapsed time:              59.76 secs
-    Data transferred:           0.00 MB
-    Response time:             16.82 secs
-    Transaction rate:           0.35 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:                5.91
-    Successful transactions:      21
-    Failed transactions:           5
-    Longest transaction:       19.63
-    Shortest transaction:       2.81
+A short conclusion is that ``multiprocessing`` approach shows more or less similar results comparing
+to ``threading`` approach, outperforming in some cases, while underperforming in another cases. It seems
+very likely, according to the original assumption and the results above, that network and I/O operations
+indeed run outside GIL, so using processes instead of threads doesn't help a lot.
 
-2. Asynchronous Tornado server, the background task runs in the same thread as the I/O loop (``2_async.py``)::
 
-    $ ./run_benchmark.sh 127.0.0.1:8001
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...
-    Lifting the server siege...
-    Transactions:                209 hits
-    Availability:             100.00 %
-    Elapsed time:              59.15 secs
-    Data transferred:           0.00 MB
-    Response time:              5.13 secs
-    Transaction rate:           3.53 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:               18.11
-    Successful transactions:     209
-    Failed transactions:           0
-    Longest transaction:        5.38
-    Shortest transaction:       0.28
-
-3. An approach using ``threading`` module, asynchronous Tornado server, the background task runs in a different thread taken from ``ThreadExecutor`` (``3_async_threadexecutor.py``)::
-
-    $ ./run_benchmark.sh 127.0.0.1:8002
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...
-    Lifting the server siege...
-    Transactions:                840 hits
-    Availability:             100.00 %
-    Elapsed time:              59.10 secs
-    Data transferred:           0.00 MB
-    Response time:              1.73 secs
-    Transaction rate:          14.21 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:               24.62
-    Successful transactions:     840
-    Failed transactions:           0
-    Longest transaction:        1.97
-    Shortest transaction:       0.28
-
-4. An approach using ``multiprocessing`` module, asynchronous Tornado server, the background task runs in a different process taken from ``ProcessExecutor`` (``4_async_processexecutor.py``)::
-
-    $ ./run_benchmark.sh 127.0.0.1:8003
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...
-    Lifting the server siege...
-    Transactions:              35470 hits
-    Availability:             100.00 %
-    Elapsed time:              59.95 secs
-    Data transferred:           0.00 MB
-    Response time:              0.04 secs
-    Transaction rate:         591.66 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:               24.95
-    Successful transactions:   35470
-    Failed transactions:           0
-    Longest transaction:        0.72
-    Shortest transaction:       0.00
-
-A short conclusion is that ``multiprocessing`` approach shows the best results,
-but more thorough testing may show differences in memory consumption and
-performance change for threads with I/O or network operations, as they may
-not use GIL.
-
-**Update.** Added returning a small piece of HTML, and the results have changed, see below.
-In short, multiprocessing no longer shows a significant advantage over
-threading approach, see below::
-
-    $ ./run_benchmark.sh 127.0.0.1:8000
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-    [error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-
-    Lifting the server siege...
-    Transactions:                 21 hits
-    Availability:              75.00 %
-    Elapsed time:              59.66 secs
-    Data transferred:           0.00 MB
-    Response time:             16.95 secs
-    Transaction rate:           0.35 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:                5.97
-    Successful transactions:      21
-    Failed transactions:           7
-    Longest transaction:       22.42
-    Shortest transaction:       0.00
-
-    $ ./run_benchmark.sh 127.0.0.1:8001
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...
-    Lifting the server siege...
-    Transactions:                211 hits
-    Availability:             100.00 %
-    Elapsed time:              59.54 secs
-    Data transferred:           0.01 MB
-    Response time:              5.13 secs
-    Transaction rate:           3.54 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:               18.19
-    Successful transactions:     211
-    Failed transactions:           0
-    Longest transaction:        5.41
-    Shortest transaction:       0.00
-
-    $ ./run_benchmark.sh 127.0.0.1:8002
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...
-    Lifting the server siege...
-    Transactions:                844 hits
-    Availability:             100.00 %
-    Elapsed time:              59.40 secs
-    Data transferred:           0.06 MB
-    Response time:              1.73 secs
-    Transaction rate:          14.21 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:               24.61
-    Successful transactions:     844
-    Failed transactions:           0
-    Longest transaction:        1.97
-    Shortest transaction:       0.28
-
-    $ ./run_benchmark.sh 127.0.0.1:8003
-    ** SIEGE 4.0.2
-    ** Preparing 25 concurrent users for battle.
-    The server is now under siege...
-    Lifting the server siege...
-    Transactions:                840 hits
-    Availability:             100.00 %
-    Elapsed time:              59.06 secs
-    Data transferred:           0.06 MB
-    Response time:              1.73 secs
-    Transaction rate:          14.22 trans/sec
-    Throughput:                 0.00 MB/sec
-    Concurrency:               24.64
-    Successful transactions:     840
-    Failed transactions:           0
-    Longest transaction:        1.99
-    Shortest transaction:       0.30

@@ -1,0 +1,205 @@
+fab run_server:1
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+
+Lifting the server siege...
+Transactions:		         210 hits
+Availability:		       96.77 %
+Elapsed time:		       59.21 secs
+Data transferred:	        0.00 MB
+Response time:		        1.94 secs
+Transaction rate:	        3.55 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        6.88
+Successful transactions:         210
+Failed transactions:	           7
+Longest transaction:	        1.98
+Shortest transaction:	        0.29
+
+
+fab run_server:2
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         209 hits
+Availability:		      100.00 %
+Elapsed time:		       59.10 secs
+Data transferred:	        0.01 MB
+Response time:		        5.38 secs
+Transaction rate:	        3.54 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       19.04
+Successful transactions:         209
+Failed transactions:	           0
+Longest transaction:	        5.67
+Shortest transaction:	        0.28
+
+
+fab run_server:3
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         848 hits
+Availability:		      100.00 %
+Elapsed time:		       59.71 secs
+Data transferred:	        0.06 MB
+Response time:		        1.73 secs
+Transaction rate:	       14.20 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.60
+Successful transactions:         848
+Failed transactions:	           0
+Longest transaction:	        1.97
+Shortest transaction:	        0.28
+
+
+fab run_server:4
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         852 hits
+Availability:		      100.00 %
+Elapsed time:		       59.91 secs
+Data transferred:	        0.06 MB
+Response time:		        1.73 secs
+Transaction rate:	       14.22 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.64
+Successful transactions:         852
+Failed transactions:	           0
+Longest transaction:	        1.99
+Shortest transaction:	        0.30
+
+
+fab run_server:3,network_sync  # http://google.com
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         197 hits
+Availability:		      100.00 %
+Elapsed time:		       59.83 secs
+Data transferred:	        0.01 MB
+Response time:		        7.09 secs
+Transaction rate:	        3.29 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       23.33
+Successful transactions:         197
+Failed transactions:	           0
+Longest transaction:	       10.15
+Shortest transaction:	        2.57
+
+
+fab run_server:4,network_sync  # http://google.com
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         189 hits
+Availability:		      100.00 %
+Elapsed time:		       59.82 secs
+Data transferred:	        0.01 MB
+Response time:		        7.42 secs
+Transaction rate:	        3.16 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       23.43
+Successful transactions:         189
+Failed transactions:	           0
+Longest transaction:	        9.86
+Shortest transaction:	        1.80
+
+
+fab run_server:3,network_sync  # http://localhost
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		        9758 hits
+Availability:		      100.00 %
+Elapsed time:		       59.27 secs
+Data transferred:	        0.64 MB
+Response time:		        0.15 secs
+Transaction rate:	      164.64 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       24.94
+Successful transactions:        9758
+Failed transactions:	           0
+Longest transaction:	        0.39
+Shortest transaction:	        0.03
+
+
+fab run_server:4,network_sync  # http://localhost
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		       16363 hits
+Availability:		      100.00 %
+Elapsed time:		       59.52 secs
+Data transferred:	        1.08 MB
+Response time:		        0.09 secs
+Transaction rate:	      274.92 trans/sec
+Throughput:		        0.02 MB/sec
+Concurrency:		       24.96
+Successful transactions:       16363
+Failed transactions:	           0
+Longest transaction:	        0.22
+Shortest transaction:	        0.02
+
+
+fab run_server:3,file_sync
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		       38780 hits
+Availability:		      100.00 %
+Elapsed time:		       59.92 secs
+Data transferred:	        2.55 MB
+Response time:		        0.04 secs
+Transaction rate:	      647.20 trans/sec
+Throughput:		        0.04 MB/sec
+Concurrency:		       24.95
+Successful transactions:       38780
+Failed transactions:	           0
+Longest transaction:	        0.10
+Shortest transaction:	        0.00
+
+
+fab run_server:4,file_sync
+siege -b -t60S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		       33607 hits
+Availability:		      100.00 %
+Elapsed time:		       59.06 secs
+Data transferred:	        2.21 MB
+Response time:		        0.04 secs
+Transaction rate:	      569.03 trans/sec
+Throughput:		        0.04 MB/sec
+Concurrency:		       24.96
+Successful transactions:       33607
+Failed transactions:	           0
+Longest transaction:	        0.10
+Shortest transaction:	        0.00

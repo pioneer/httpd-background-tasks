@@ -34,7 +34,7 @@ def sleep_async(callback=None):
 
 
 def network_sync():
-    res = requests.get("http://google.com")
+    res = requests.get("http://localhost")
     return res.content
 
 
