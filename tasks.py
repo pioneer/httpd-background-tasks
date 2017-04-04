@@ -1,8 +1,12 @@
 import time
 from tornado.concurrent import return_future
+from datetime import timedelta
+from tornado import httpclient
 import requests
 import feedparser
 import settings
+import tornado.ioloop
+import asyncio
 
 
 class User(object):
@@ -16,6 +20,20 @@ class User(object):
     def social_api(self):
         time.sleep(0.2)
 
+class AsyncUser(object):
+
+    def __init__(self, callback):
+        self.callback = callback
+
+    def save(self):
+        tornado.ioloop.IOLoop.add_timeout(tornado.ioloop.IOLoop.instance(), timedelta(milliseconds=20), self.send_email)
+
+    def send_email(self):
+        tornado.ioloop.IOLoop.add_timeout(tornado.ioloop.IOLoop.instance(), timedelta(milliseconds=60), self.social_api)
+
+    def social_api(self):
+        tornado.ioloop.IOLoop.add_timeout(tornado.ioloop.IOLoop.instance(), timedelta(milliseconds=200), self.callback)
+
 
 def sleep():
     user = User()
@@ -24,8 +42,18 @@ def sleep():
     user.social_api()
 
 
+def sleep_non_blocking(calback):
+    user = AsyncUser(calback)
+    user.save()
+
+
 def sleep_sync():
     sleep()
+
+
+@return_future
+def sleep_non_blocking_async(callback=None):
+    sleep_non_blocking(callback)
 
 
 @return_future
@@ -35,7 +63,7 @@ def sleep_async(callback=None):
 
 
 def network_sync():
-    res = requests.get("http://localhost")
+    res = requests.get("http://localhost/")
     return res.content
 
 
