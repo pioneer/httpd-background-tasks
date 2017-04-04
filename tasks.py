@@ -1,12 +1,9 @@
 import time
 from tornado.concurrent import return_future
 from datetime import timedelta
-from tornado import httpclient
 import requests
 import feedparser
-import settings
 import tornado.ioloop
-import asyncio
 
 
 class User(object):

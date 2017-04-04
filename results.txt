@@ -283,3 +283,19 @@ Successful transactions:          69
 Failed transactions:	           0
 Longest transaction:	       23.42
 Shortest transaction:	        2.85
+
+fab run_server:5,sleep_non_blocking_async
+siege -b -t60S 127.0.0.1:8000
+Lifting the server siege...
+Transactions:		        5100 hits
+Availability:		      100.00 %
+Elapsed time:		       59.51 secs
+Data transferred:	        0.34 MB
+Response time:		        0.29 secs
+Transaction rate:	       85.70 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       24.95
+Successful transactions:        5100
+Failed transactions:	           0
+Longest transaction:	        0.31
+Shortest transaction:	        0.28

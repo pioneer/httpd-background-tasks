@@ -35,6 +35,7 @@ Benchmark results:
 --------------------------------------------------  ------------  ----------------  -------------
 Sync                                                96.77 %       3.55 trans/sec    1.94 secs
 Async                                               100.00 %      3.54 trans/sec    5.38 secs
+Async, non-blocking                                 100.00 %      85.70 trans/sec   0.29 secs
 Async, threading                                    100.00 %      14.20 trans/sec   1.73 secs
 Async, multiprocessing                              100.00 %      14.22 trans/sec   1.73 secs
 Async, threading, network, google.com               100.00 %      3.29 trans/sec    7.09 secs
@@ -48,6 +49,7 @@ Async, multiprocessing, network, HTTPS              100.00 %      5.07 trans/sec
 Async, threading, network, HTTPS + CPU-bound        100.00 %      0.45 trans/sec    31.57 secs
 Async, multiprocessing, network, HTTPS + CPU-bound  100.00 %      1.15 trans/sec    17.82 secs
 ==================================================  ============  ================  =============
+
 
 **Note:** Full results can be found in ``results.txt`` file.
 
