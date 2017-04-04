@@ -30,20 +30,24 @@ Prerequisites:
 Benchmark results:
 ------------------
 
-=============================================  ============  ================  =============
-\                                              Availability  Transaction rate  Response time
----------------------------------------------  ------------  ----------------  -------------
-Sync                                           96.77 %       3.55 trans/sec    1.94 secs
-Async                                          100.00 %      3.54 trans/sec    5.38 secs
-Async, threading                               100.00 %      14.20 trans/sec   1.73 secs
-Async, multiprocessing                         100.00 %      14.22 trans/sec   1.73 secs
-Async, threading, network, google.com          100.00 %      3.29 trans/sec    7.09 secs
-Async, multiprocessing, network, google.com    100.00 %      3.16 trans/sec    7.42 secs
-Async, threading, network, local Apache        100.00 %      164.64 trans/sec  0.15 secs
-Async, multiprocessing, network, local Apache  100.00 %      274.92 trans/sec  0.09 secs
-Async, threading, file                         100.00 %      647.20 trans/sec  0.04 secs
-Async, multiprocessing, file                   100.00 %      569.03 trans/sec  0.04 secs
-=============================================  ============  ================  =============
+==================================================  ============  ================  =============
+\                                                   Availability  Transaction rate  Response time
+--------------------------------------------------  ------------  ----------------  -------------
+Sync                                                96.77 %       3.55 trans/sec    1.94 secs
+Async                                               100.00 %      3.54 trans/sec    5.38 secs
+Async, threading                                    100.00 %      14.20 trans/sec   1.73 secs
+Async, multiprocessing                              100.00 %      14.22 trans/sec   1.73 secs
+Async, threading, network, google.com               100.00 %      3.29 trans/sec    7.09 secs
+Async, multiprocessing, network, google.com         100.00 %      3.16 trans/sec    7.42 secs
+Async, threading, network, local Apache             100.00 %      164.64 trans/sec  0.15 secs
+Async, multiprocessing, network, local Apache       100.00 %      274.92 trans/sec  0.09 secs
+Async, threading, file                              100.00 %      647.20 trans/sec  0.04 secs
+Async, multiprocessing, file                        100.00 %      569.03 trans/sec  0.04 secs
+Async, threading, network, HTTPS                    100.00 %      4.60 trans/sec    5.31 secs
+Async, multiprocessing, network, HTTPS              100.00 %      5.07 trans/sec    4.69 secs
+Async, threading, network, HTTPS + CPU-bound        100.00 %      0.45 trans/sec    31.57 secs
+Async, multiprocessing, network, HTTPS + CPU-bound  100.00 %      1.15 trans/sec    17.82 secs
+==================================================  ============  ================  =============
 
 **Note:** Full results can be found in ``results.txt`` file.
 

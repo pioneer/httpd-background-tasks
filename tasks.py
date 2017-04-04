@@ -1,6 +1,7 @@
 import time
 from tornado.concurrent import return_future
 import requests
+import feedparser
 import settings
 
 
@@ -36,6 +37,18 @@ def sleep_async(callback=None):
 def network_sync():
     res = requests.get("http://localhost")
     return res.content
+
+
+def network_https_sync():
+    res = requests.get("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss")
+    return res.content
+
+
+def network_https_cpu_bound_sync():
+    res = requests.get("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss")
+    for i in xrange(20):
+        data = feedparser.parse(res.content)
+    return data
 
 
 def file_sync():
