@@ -12,6 +12,10 @@ task = tasks.get_task(task_name)
 
 
 class SyncServer(SimpleHTTPServer.SimpleHTTPRequestHandler):
+
+    def log_message(self, format, *args):
+        pass
+
     def do_GET(self, *args, **kwargs):
         task()
         self.send_response(200, message=settings.TEMPLATE)
@@ -20,6 +24,7 @@ class SyncServer(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 def run():
     Handler = SyncServer
+    SocketServer.TCPServer.allow_reuse_address = True
     httpd = SocketServer.TCPServer(("", settings.PORT), Handler)
     print "serving at port", settings.PORT
     httpd.serve_forever()

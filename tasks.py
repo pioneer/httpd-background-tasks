@@ -1,8 +1,10 @@
+import os
 import time
+import tempfile
+from tornado import gen
 from tornado.concurrent import return_future
 import requests
 import feedparser
-import settings
 
 
 class User(object):
@@ -34,8 +36,18 @@ def sleep_async(callback=None):
     callback()
 
 
-def network_sync():
-    res = requests.get("http://localhost")
+sleep_async_split_1 = gen.sleep(0.02)
+sleep_async_split_2 = gen.sleep(0.06)
+sleep_async_split_3 = gen.sleep(0.2)
+
+
+def network_sync_local():
+    res = requests.get("http://localhost/")
+    return res.content
+
+
+def network_sync_google():
+    res = requests.get("http://google.com/")
     return res.content
 
 
@@ -55,8 +67,21 @@ def file_sync():
     f = open("template.html")
     content = f.read()
     f.close()
+    f = tempfile.TemporaryFile()
+    f.write(content)
+    f.flush()
+    os.fsync(f.fileno())
+    f.close()
     return content
 
 
 def get_task(name):
     return globals()[name]
+
+
+GROUPS = {"sleep_async_split": ["sleep_async_split_1",
+                                "sleep_async_split_2",
+                                "sleep_async_split_3"]}
+
+def get_group_tasks(group):
+    return [get_task(name) for name in GROUPS[group]]
