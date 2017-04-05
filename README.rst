@@ -11,16 +11,20 @@ Below are performance benchmark results for several implementations of an HTTP s
 Test servers
 ------------
 1. Synchronous HTTP server
-2. Asynchronous Tornado server, the background task runs in the same thread as the event loop
+2. Asynchronous Tornado server, the background task runs in the same thread as the event loop (and a grouped variation which can run several tasks, releasing an event loop after each one)
 3. Asynchronous Tornado server, an approach using ``threading`` module, the background task runs in a different thread taken from ``ThreadExecutor``
 4. Asynchronous Tornado server, an approach using ``multiprocessing`` module, the background task runs in a different process taken from ``ProcessExecutor``
 
 Background tasks
 ----------------
-* *None specified* -- equals to ``sleep_sync`` -- a blocking task which basically just sleeps and returns some HTML (imitating a website user activity)
+* *None specified* -- equals to ``sleep_sync`` (in most cases) -- a blocking task which basically just sleeps and returns some HTML (imitating a website user activity)
 * ``sleep_async`` -- the same as above, but returns a future and can be embedded in a Tornado event loop
-* ``network_sync`` -- fetches a content from an URL somewhere in the network and returns it (for the tests below "google.com" and "localhost" were used, with local Apache in the latter case)
-* ``file_sync`` -- reads a file from the filesystem and returns its content
+* ``sleep_async_split`` -- a group of tasks, where the sleeps from the above are split to smaller sleeps, which run separately
+* ``network_sync_google`` -- fetches a content from google.com and returns it
+* ``network_sync_local`` -- fetches a content from localhost and returns it (local Apache serves the URL)
+* ``network_https_sync`` -- fetches a content from an https:// URL (here we try to measure the HTTPS parsing overhead)
+* ``network_https_cpu_bound_sync`` fetches a content from an https:// URL, then parses the XML taken from it (here we try to measure a CPU-heavy task)
+* ``file_sync`` -- reads a file from the filesystem, writes it to a temporary file and returns its content
 
 Prerequisites:
 
