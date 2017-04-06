@@ -27,8 +27,9 @@ class UserHandler(tornado.web.RequestHandler):
 
     @gen.coroutine
     def get(self):
+        res = None
         for task in group_tasks:
-            res = yield task
+            res = yield task(res)
         self.write(settings.TEMPLATE)
         self.finish()
 

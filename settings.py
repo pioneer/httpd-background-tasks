@@ -7,4 +7,4 @@ f.close()
 
 MAX_WORKERS = multiprocessing.cpu_count()
 PORT = 8000
-LOAD_TEST_TIME = 60  # seconds
+LOAD_TEST_TIME = 300  # seconds

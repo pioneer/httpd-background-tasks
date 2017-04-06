@@ -1,285 +1,1388 @@
 fab run_server:1
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
-The server is now under siege...[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
-[error] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+The server is now under siege...[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read errorserving at port 8000
+ Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:539: Connection reset by peer
 
 Lifting the server siege...
-Transactions:		         210 hits
-Availability:		       96.77 %
-Elapsed time:		       59.21 secs
+Transactions:		        1066 hits
+Availability:		       94.92 %
+Elapsed time:		      299.51 secs
 Data transferred:	        0.00 MB
-Response time:		        1.94 secs
-Transaction rate:	        3.55 trans/sec
+Response time:		        1.96 secs
+Transaction rate:	        3.56 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		        6.88
-Successful transactions:         210
-Failed transactions:	           7
+Concurrency:		        6.98
+Successful transactions:        1066
+Failed transactions:	          57
 Longest transaction:	        1.98
-Shortest transaction:	        0.29
+Shortest transaction:	        0.00
 
 
 fab run_server:2
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		         209 hits
+Transactions:		        1064 hits
 Availability:		      100.00 %
-Elapsed time:		       59.10 secs
-Data transferred:	        0.01 MB
-Response time:		        5.38 secs
-Transaction rate:	        3.54 trans/sec
+Elapsed time:		      299.95 secs
+Data transferred:	        0.07 MB
+Response time:		        6.97 secs
+Transaction rate:	        3.55 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       19.04
-Successful transactions:         209
+Concurrency:		       24.71
+Successful transactions:        1064
 Failed transactions:	           0
-Longest transaction:	        5.67
+Longest transaction:	       72.15
+Shortest transaction:	        0.29
+
+
+fab run_server:2_group
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		       26417 hits
+Availability:		      100.00 %
+Elapsed time:		      299.94 secs
+Data transferred:	        1.74 MB
+Response time:		        0.28 secs
+Transaction rate:	       88.07 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       24.99
+Successful transactions:       26417
+Failed transactions:	           0
+Longest transaction:	        0.31
 Shortest transaction:	        0.28
 
 
 fab run_server:3
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		         848 hits
+Transactions:		        4272 hits
 Availability:		      100.00 %
-Elapsed time:		       59.71 secs
-Data transferred:	        0.06 MB
-Response time:		        1.73 secs
-Transaction rate:	       14.20 trans/sec
+Elapsed time:		      299.95 secs
+Data transferred:	        0.28 MB
+Response time:		        1.75 secs
+Transaction rate:	       14.24 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       24.60
-Successful transactions:         848
+Concurrency:		       24.92
+Successful transactions:        4272
 Failed transactions:	           0
 Longest transaction:	        1.97
-Shortest transaction:	        0.28
+Shortest transaction:	        0.29
 
 
 fab run_server:4
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
-** Preparing 25 concurrent users for battle.
+** Preparing 25 concurreserving at port 8000
+serving at port 8000
+nt users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		         852 hits
+Transactions:		        4272 hits
 Availability:		      100.00 %
-Elapsed time:		       59.91 secs
-Data transferred:	        0.06 MB
-Response time:		        1.73 secs
-Transaction rate:	       14.22 trans/sec
+Elapsed time:		      299.95 secs
+Data transferred:	        0.28 MB
+Response time:		        1.75 secs
+Transaction rate:	       14.24 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       24.64
-Successful transactions:         852
+Concurrency:		       24.92
+Successful transactions:        4272
 Failed transactions:	           0
-Longest transaction:	        1.99
-Shortest transaction:	        0.30
+Longest transaction:	        1.98
+Shortest transaction:	        0.29
 
 
-fab run_server:3,network_sync  # http://google.com
-siege -b -t60S 127.0.0.1:8000
+fab run_server:2,network_async_local
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		         197 hits
+Transactions:		      128289 hits
 Availability:		      100.00 %
-Elapsed time:		       59.83 secs
-Data transferred:	        0.01 MB
-Response time:		        7.09 secs
-Transaction rate:	        3.29 trans/sec
-Throughput:		        0.00 MB/sec
-Concurrency:		       23.33
-Successful transactions:         197
+Elapsed time:		      299.95 secs
+Data transferred:	        8.44 MB
+Response time:		        0.06 secs
+Transaction rate:	      427.70 trans/sec
+Throughput:		        0.03 MB/sec
+Concurrency:		       24.98
+Successful transactions:      128289
 Failed transactions:	           0
-Longest transaction:	       10.15
-Shortest transaction:	        2.57
-
-
-fab run_server:4,network_sync  # http://google.com
-siege -b -t60S 127.0.0.1:8000
-** SIEGE 4.0.2
-** Preparing 25 concurrent users for battle.
-The server is now under siege...
-Lifting the server siege...
-Transactions:		         189 hits
-Availability:		      100.00 %
-Elapsed time:		       59.82 secs
-Data transferred:	        0.01 MB
-Response time:		        7.42 secs
-Transaction rate:	        3.16 trans/sec
-Throughput:		        0.00 MB/sec
-Concurrency:		       23.43
-Successful transactions:         189
-Failed transactions:	           0
-Longest transaction:	        9.86
-Shortest transaction:	        1.80
-
-
-fab run_server:3,network_sync  # http://localhost
-siege -b -t60S 127.0.0.1:8000
-** SIEGE 4.0.2
-** Preparing 25 concurrent users for battle.
-The server is now under siege...
-Lifting the server siege...
-Transactions:		        9758 hits
-Availability:		      100.00 %
-Elapsed time:		       59.27 secs
-Data transferred:	        0.64 MB
-Response time:		        0.15 secs
-Transaction rate:	      164.64 trans/sec
-Throughput:		        0.01 MB/sec
-Concurrency:		       24.94
-Successful transactions:        9758
-Failed transactions:	           0
-Longest transaction:	        0.39
+Longest transaction:	        0.15
 Shortest transaction:	        0.03
 
 
-fab run_server:4,network_sync  # http://localhost
-siege -b -t60S 127.0.0.1:8000
+fab run_server:3,network_sync_local
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		       16363 hits
+Transactions:		       68025 hits
 Availability:		      100.00 %
-Elapsed time:		       59.52 secs
-Data transferred:	        1.08 MB
-Response time:		        0.09 secs
-Transaction rate:	      274.92 trans/sec
-Throughput:		        0.02 MB/sec
-Concurrency:		       24.96
-Successful transactions:       16363
+Elapsed time:		      299.92 secs
+Data transferred:	        4.48 MB
+Response time:		        0.11 secs
+Transaction rate:	      226.81 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       24.99
+Successful transactions:       68025
 Failed transactions:	           0
 Longest transaction:	        0.22
-Shortest transaction:	        0.02
+Shortest transaction:	        0.04
 
 
-fab run_server:3,file_sync
-siege -b -t60S 127.0.0.1:8000
+fab run_server:4,network_sync_local
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		       38780 hits
+Transactions:		      102184 hits
 Availability:		      100.00 %
-Elapsed time:		       59.92 secs
-Data transferred:	        2.55 MB
-Response time:		        0.04 secs
-Transaction rate:	      647.20 trans/sec
-Throughput:		        0.04 MB/sec
-Concurrency:		       24.95
-Successful transactions:       38780
+Elapsed time:		      299.95 secs
+Data transferred:	        6.72 MB
+Response time:		        0.07 secs
+Transaction rate:	      340.67 trans/sec
+Throughput:		        0.02 MB/sec
+Concurrency:		       24.98
+Successful transactions:      102184
 Failed transactions:	           0
-Longest transaction:	        0.10
-Shortest transaction:	        0.00
+Longest transaction:	        1.05
+Shortest transaction:	        0.01
 
 
-fab run_server:4,file_sync
-siege -b -t60S 127.0.0.1:8000
+fab run_server:2,network_async_google
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		       33607 hits
+Transactions:		        1780 hits
 Availability:		      100.00 %
-Elapsed time:		       59.06 secs
-Data transferred:	        2.21 MB
-Response time:		        0.04 secs
-Transaction rate:	      569.03 trans/sec
-Throughput:		        0.04 MB/sec
-Concurrency:		       24.96
-Successful transactions:       33607
+Elapsed time:		      299.92 secs
+Data transferred:	        0.12 MB
+Response time:		        4.15 secs
+Transaction rate:	        5.93 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.66
+Successful transactions:        1780
 Failed transactions:	           0
-Longest transaction:	        0.10
-Shortest transaction:	        0.00
+Longest transaction:	       11.78
+Shortest transaction:	        0.59
+
+
+fab run_server:3,network_sync_google
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		        1979 hits
+Availability:		      100.00 %
+Elapsed time:		      299.95 secs
+Data transferred:	        0.13 MB
+Response time:		        3.71 secs
+Transaction rate:	        6.60 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.46
+Successful transactions:        1979
+Failed transactions:	           0
+Longest transaction:	       12.05
+Shortest transaction:	        0.39
+
+
+fab run_server:4,network_sync_google
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		        1740 hits
+Availability:		      100.00 %
+Elapsed time:		      299.95 secs
+Data transferred:	        0.11 MB
+Response time:		        4.28 secs
+Transaction rate:	        5.80 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.86
+Successful transactions:        1740
+Failed transactions:	  ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2.py", line 30, in get
+    res = yield task()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 16057.61ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2.py", line 30, in get
+    res = yield task()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 17392.73ms
+serving at port 8000
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20007.56ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20004.54ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20008.18ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20007.48ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20007.56ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20007.53ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20011.40ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20007.82ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 20007.80ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 15103.97ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 15326.43ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 15326.47ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 18505.85ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 18505.56ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 30117.52ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 18506.29ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 18506.06ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 18508.91ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 22900.94ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 17861.69ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 17865.65ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout in request queue
+ERROR:tornado.access:500 GET / (127.0.0.1) 26296.08ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout in request queue
+ERROR:tornado.access:500 GET / (127.0.0.1) 23442.27ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout in request queue
+ERROR:tornado.access:500 GET / (127.0.0.1) 23442.43ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 32541.88ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 37020.03ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout during request
+ERROR:tornado.access:500 GET / (127.0.0.1) 37022.93ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 34179.38ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 21115.00ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 37019.28ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout in request queue
+ERROR:tornado.access:500 GET / (127.0.0.1) 24652.68ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 32765.95ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 31368.47ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 35813.81ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 32767.98ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout in request queue
+ERROR:tornado.access:500 GET / (127.0.0.1) 21698.63ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 34007.93ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 26173.23ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 24436.84ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 29591.55ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+SSLEOFError: EOF occurred in violation of protocol (_ssl.c:590)
+ERROR:tornado.access:500 GET / (127.0.0.1) 24149.89ms
+ERROR:tornado.application:Uncaught exception GET / (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'User-Agent': 'Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.2', 'Connection': 'close', 'Accept': '*/*', 'Accept-Encoding': 'gzip;deflate'})
+Traceback (most recent call last):
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/web.py", line 1469, in _execute
+    result = yield result
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1021, in run
+    yielded = self.gen.throw(*exc_info)
+  File "test_2_group.py", line 32, in get
+    res = yield task(res)
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/gen.py", line 1015, in run
+    value = future.result()
+  File "/home/pioneer/.virtualenvs/astornado/local/lib/python2.7/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout in request queue
+ERROR:tornado.access:500 GET / (127.0.0.1) 21799.67ms
+serving at port 8000
+         0
+Longest transaction:	       13.78
+Shortest transaction:	        0.41
+
+
+fab run_server:2,network_https_async
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		        1373 hits
+Availability:		       99.85 %
+Elapsed time:		      299.94 secs
+Data transferred:	        0.09 MB
+Response time:		        5.44 secs
+Transaction rate:	        4.58 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.91
+Successful transactions:        1373
+Failed transactions:	           2
+Longest transaction:	       19.34
+Shortest transaction:	        0.64
 
 
 fab run_server:3,network_https_sync
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		         273 hits
+Transactions:		        1954 hits
 Availability:		      100.00 %
-Elapsed time:		       59.29 secs
-Data transferred:	        0.02 MB
-Response time:		        5.31 secs
-Transaction rate:	        4.60 trans/sec
+Elapsed time:		      299.94 secs
+Data transferred:	        0.13 MB
+Response time:		        3.82 secs
+Transaction rate:	        6.51 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       24.46
-Successful transactions:         273
+Concurrency:		       24.88
+Successful transactions:        1954
 Failed transactions:	           0
-Longest transaction:	       13.99
-Shortest transaction:	        0.28
+Longest transaction:	       12.79
+Shortest transaction:	        0.24
 
 
 fab run_server:4,network_https_sync
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		         300 hits
+Transactions:		        2052 hits
 Availability:		      100.00 %
-Elapsed time:		       59.14 secs
-Data transferred:	        0.02 MB
-Response time:		        4.69 secs
-Transaction rate:	        5.07 trans/sec
+Elapsed time:		      299.96 secs
+Data transferred:	        0.14 MB
+Response time:		        3.63 secs
+Transaction rate:	        6.84 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       23.80
-Successful transactions:         300
+Concurrency:		       24.85
+Successful transactions:        2052
 Failed transactions:	           0
-Longest transaction:	       13.30
-Shortest transaction:	        0.58
+Longest transaction:	        9.99
+Shortest transaction:	        0.21
+
+
+fab run_server:2,network_https_cpu_bound_async
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         166 hits
+Availability:		      100.00 %
+Elapsed time:		      299.94 secs
+Data transferred:	        0.01 MB
+Response time:		       30.82 secs
+Transaction rate:	        0.55 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       17.06
+Successful transactions:         166
+Failed transactions:	           0
+Longest transaction:	       36.90
+Shortest transaction:	        1.68
+
+
+fab run_server:2_group,network_https_cpu_bound_async_split
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		         185 hits
+Availability:		       81.50 %
+Elapsed time:		      299.94 secs
+Data transferred:	        0.02 MB
+Response time:		       37.91 secs
+Transaction rate:	        0.62 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       23.38
+Successful transactions:         185
+Failed transactions:	          42
+Longest transaction:	       44.38
+Shortest transaction:	        7.26
 
 
 fab run_server:3,network_https_cpu_bound_sync
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		          27 hits
+Transactions:		         154 hits
 Availability:		      100.00 %
-Elapsed time:		       59.82 secs
-Data transferred:	        0.00 MB
-Response time:		       31.57 secs
-Transaction rate:	        0.45 trans/sec
+Elapsed time:		      299.94 secs
+Data transferred:	        0.01 MB
+Response time:		       44.74 secs
+Transaction rate:	        0.51 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       14.25
-Successful transactions:          27
+Concurrency:		       22.97
+Successful transactions:         154
 Failed transactions:	           0
-Longest transaction:	       54.73
-Shortest transaction:	        5.30
+Longest transaction:	       56.65
+Shortest transaction:	        5.16
 
 
 fab run_server:4,network_https_cpu_bound_sync
-siege -b -t60S 127.0.0.1:8000
+[localhost] local: siege -b -t300S 127.0.0.1:8000
 ** SIEGE 4.0.2
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege...
-Transactions:		          69 hits
+Transactions:		         318 hits
 Availability:		      100.00 %
-Elapsed time:		       59.92 secs
-Data transferred:	        0.00 MB
-Response time:		       17.82 secs
-Transaction rate:	        1.15 trans/sec
+Elapsserving at port 8000
+ed time:		      299.95 secs
+Data transferred:	        0.02 MB
+Response time:		       22.70 secs
+Transaction rate:	        1.06 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		       20.52
-Successful transactions:          69
+Concurrency:		       24.07
+Successful transactions:         318
 Failed transactions:	           0
-Longest transaction:	       23.42
-Shortest transaction:	        2.85
+Longest transaction:	       30.81
+Shortest transaction:	        2.92
+
+
+fab run_server:2,file_async
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		        8121 hits
+Availability:		      100.00 %
+Elapsed time:		      299.85 secs
+Data transferred:	        0.53 MB
+Response time:		        0.92 secs
+Transaction rate:	       27.08 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.96
+Successful transactions:        8121
+Failed transactions:	           0
+Longest transaction:	        9.10
+Shortest transaction:	        0.05
+
+
+fab run_server:3,file_sync
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		       13905 hits
+Availability:		      100.00 %
+Elapsed time:		      299.95 secs
+Data transferred:	        0.91 MB
+Response time:		        0.54 secs
+Transaction rate:	       46.36 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.98
+Successful transactions:       13905
+Failed transactions:	           0
+Longest transaction:	        0.90
+Shortest transaction:	        0.12
+
+
+fab run_server:4,file_sync
+[localhost] local: siege -b -t300S 127.0.0.1:8000
+** SIEGE 4.0.2
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...
+Transactions:		       13730 hits
+Availability:		      100.00 %
+Elapsed time:		      299.95 secs
+Data transferred:	        0.90 MB
+Response time:		        0.55 secs
+Transaction rate:	       45.77 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       24.97
+Successful transactions:       13730
+Failed transactions:	           0
+Longest transaction:	        1.52
+Shortest transaction:	        0.06
+
+
+Task                                                        Availability    Response time    Transaction rate
+----------------------------------------------------------  --------------  ---------------  ------------------
+fab run_server:1                                            94.92 %         1.96 secs        3.56 trans/sec
+fab run_server:2                                            100.00 %        6.97 secs        3.55 trans/sec
+fab run_server:2_group                                      100.00 %        0.28 secs        88.07 trans/sec
+fab run_server:3                                            100.00 %        1.75 secs        14.24 trans/sec
+fab run_server:4                                            100.00 %        1.75 secs        14.24 trans/sec
+fab run_server:2,network_async_local                        100.00 %        0.06 secs        427.70 trans/sec
+fab run_server:3,network_sync_local                         100.00 %        0.11 secs        226.81 trans/sec
+fab run_server:4,network_sync_local                         100.00 %        0.07 secs        340.67 trans/sec
+fab run_server:2,network_async_google                       100.00 %        4.15 secs        5.93 trans/sec
+fab run_server:3,network_sync_google                        100.00 %        3.71 secs        6.60 trans/sec
+fab run_server:4,network_sync_google                        100.00 %        4.28 secs        5.80 trans/sec
+fab run_server:2,network_https_async                        99.85 %         5.44 secs        4.58 trans/sec
+fab run_server:3,network_https_sync                         100.00 %        3.82 secs        6.51 trans/sec
+fab run_server:4,network_https_sync                         100.00 %        3.63 secs        6.84 trans/sec
+fab run_server:2,network_https_cpu_bound_async              100.00 %        30.82 secs       0.55 trans/sec
+fab run_server:2_group,network_https_cpu_bound_async_split  81.50 %         37.91 secs       0.62 trans/sec
+fab run_server:3,network_https_cpu_bound_sync               100.00 %        44.74 secs       0.51 trans/sec
+fab run_server:4,network_https_cpu_bound_sync               100.00 %        22.70 secs       1.06 trans/sec
+fab run_server:2,file_async                                 100.00 %        0.92 secs        27.08 trans/sec
+fab run_server:3,file_sync                                  100.00 %        0.54 secs        46.36 trans/sec
+fab run_server:4,file_sync                                  100.00 %        0.55 secs        45.77 trans/sec
+
+Done.
