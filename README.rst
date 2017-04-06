@@ -34,7 +34,7 @@ Prerequisites:
 Benchmark results:
 ------------------
 
-Please see full results can be found in ``results.txt`` file.
+Full results can be found in ``results.txt`` file, with summary section at the end of file.
 
 A short conclusion is that ``multiprocessing`` approach shows more or less similar results comparing
 to ``threading`` approach, outperforming in some cases, while underperforming in another cases. It seems
