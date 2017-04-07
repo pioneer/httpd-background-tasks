@@ -1,7 +1,7 @@
 Benchmarks of running a long-term process within an HTTP server
 ===============================================================
 
-Inspired by, and code is taken partly from these linkes:
+Inspired by, and code is taken partly from these links:
 
 * http://www.maigfrga.ntweb.co/asynchronous-programming-tornado-framework/
 * https://gist.github.com/methane/2185380
@@ -20,11 +20,16 @@ Background tasks
 * *None specified* -- equals to ``sleep_sync`` (in most cases) -- a blocking task which basically just sleeps and returns some HTML (imitating a website user activity)
 * ``sleep_async`` -- the same as above, but returns a future and can be embedded in a Tornado event loop
 * ``sleep_async_split`` -- a group of tasks, where the sleeps from the above are split to smaller sleeps, which run separately
-* ``network_sync_google`` -- fetches a content from google.com and returns it
 * ``network_sync_local`` -- fetches a content from localhost and returns it (local Apache serves the URL)
+* ``network_async_local`` -- the same as the above, but asynchronous
+* ``network_sync_external`` -- fetches a content from a controlled external server and returns it
+* ``network_async_external`` -- the same as the above, but asynchronous
 * ``network_https_sync`` -- fetches a content from an https:// URL (here we try to measure the HTTPS parsing overhead)
-* ``network_https_cpu_bound_sync`` fetches a content from an https:// URL, then parses the XML taken from it (here we try to measure a CPU-heavy task)
+* ``network_https_async`` -- the same as the above, but asynchronous
+* ``network_https_cpu_bound_sync`` -- fetches a content from an https:// URL, then parses the XML taken from it (here we try to measure a CPU-heavy task)
+* ``network_https_cpu_bound_async`` -- the same as the above, but asynchronous
 * ``file_sync`` -- reads a file from the filesystem, writes it to a temporary file and returns its content
+* ``file_async`` -- the same as the above, but asynchronous
 
 Prerequisites:
 
@@ -61,10 +66,31 @@ fab run_server:3,file_sync                      100.00 %        0.57 secs       
 fab run_server:4,file_sync                      100.00 %        0.55 secs        45.14 trans/sec
 ==============================================  ==============  ===============  ==================
 
-A short conclusion is that ``multiprocessing`` approach shows more or less similar results comparing
-to ``threading`` approach, outperforming in some cases, while underperforming in another cases. It seems
-very likely, according to the original assumption and the results above, that network and I/O operations
-indeed run outside GIL, so using processes instead of threads doesn't help a lot.
+Observations:
+-------------
 
-**Update:** It seems that single-threaded async approach shows very competitive results, especially
-when properly split into smaller tasks, giving back control to the event loop after spawning each task.
+**Multiprocessing** approach, using ``ProcessExecutor`` (``fab run_server:4``, test server #4) shows good results in most cases, especially
+in CPU-heavy and filesystem I/O-heavy tasks. Memory consumption is still not measured, but it should
+take more memory than any other method. The code is the most complicated, due to the fact that
+Tornado's ``runon_executor`` doesn't play well with processes.
+
+**Threading** approach, using ``ThreadExecutor`` (``fab run_server:3``, test server number 3) shows slightly slower performance than **multiprocessing**,
+but the code is simpler to write and maintain. Memory consumption is not measured, but a thread should
+take less than a process.
+
+**Single-threaded async** approach (``fab run_server:2`` and ``fab run_server:2_group``, test server number 2), surprisingly,
+outperforms any other approach in most tests, except
+CPU-heavy and filesystem I/O-heavy ones. It seems very likely that network and I/O operations indeed run
+outside GIL, so, therefore, using threads or processes doesn't help a lot in those cases. In fact,
+saving time by not starting a thread or a process adds a value to the performance, according to the
+results above. The best benefit can be achieved when a task is properly prepared for using within an
+event loop, by yielding the control back to the loop after each small operation that can be done
+asynchronously (see ``fab run_server:2_group`` as an example). The code looks very natural, as it's the recommended way
+to write asynchronous code for Tornado. Memory consumption is not measured but should be the least of all.
+
+**Synchronous** approach is slower than any other, so it's here just for testing purposes.
+
+Summary
+-------
+
+**Single-threaded async** approach shows very competitive results, so it can be used by default in most cases. Threads or processes can be considered only for CPU-consumings tasks in high-loaded systems.
