@@ -43,55 +43,62 @@ sleep_async_split_3 = lambda res: gen.sleep(0.2)
 
 
 def network_sync_local():
-    res = requests.get("http://localhost/")
+    res = requests.get("http://127.0.0.1/template.html")
     return res.content
 
 
+@gen.coroutine
 def network_async_local():
     client = AsyncHTTPClient()
-    return client.fetch("http://localhost/")
+    res = yield client.fetch("http://127.0.0.1/template.html")
+    raise gen.Return(res.body)
 
 
-def network_sync_google():
-    res = requests.get("http://google.com/")
+def network_sync_external():
+    res = requests.get("http://52.58.36.186/template.html")
     return res.content
 
 
-def network_async_google():
+@gen.coroutine
+def network_async_external():
     client = AsyncHTTPClient()
-    return client.fetch("http://google.com/")
+    res = yield client.fetch("http://52.58.36.186/template.html")
+    raise gen.Return(res.body)
 
 
 def network_https_sync():
-    res = requests.get("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss")
+    res = requests.get("https://52.58.36.186/template.html", verify=False)
     return res.content
 
 
+@gen.coroutine
 def network_https_async(res=None):
     client = AsyncHTTPClient()
-    return client.fetch("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss")
+    res = yield client.fetch("https://52.58.36.186/template.html", validate_cert=False)
+    raise gen.Return(res.body)
 
 
 def network_https_cpu_bound_sync():
-    res = requests.get("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss")
+    res = requests.get("https://52.58.36.186/news.xml", verify=False)
     for i in xrange(20):
         data = feedparser.parse(res.content)
     return data
 
 
-@return_future
-def network_https_cpu_bound_async(callback=None):
-    res = requests.get("https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss")
-    for i in xrange(20):
-        data = feedparser.parse(res.content)
-    callback()
-
-
-@return_future
-def cpu_bound_async(res, callback=None):
+@gen.coroutine
+def network_https_cpu_bound_async():
+    client = AsyncHTTPClient()
+    res = yield client.fetch("http://52.58.36.186/news.xml", validate_cert=False)
     for i in xrange(20):
         data = feedparser.parse(res.body)
-    callback()
+    raise gen.Return(data)
+
+
+@gen.coroutine
+def cpu_bound_async(res=None):
+    for i in xrange(20):
+        data = feedparser.parse(res.body)
+    raise gen.Return(data)
 
 
 def file():
@@ -123,10 +130,7 @@ def get_task(name):
 GROUPS = {"sleep_async_split":
             ["sleep_async_split_1",
              "sleep_async_split_2",
-             "sleep_async_split_3"],
-          "network_https_cpu_bound_async_split":
-            ["network_https_async",
-             "cpu_bound_async"]}
+             "sleep_async_split_3"]}
 
 def get_group_tasks(group):
     return [get_task(name) for name in GROUPS[group]]

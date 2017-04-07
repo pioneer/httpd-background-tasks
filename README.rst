@@ -34,7 +34,32 @@ Prerequisites:
 Benchmark results:
 ------------------
 
-Full results can be found in ``results.txt`` file, with summary section at the end of file.
+Full results can be found in ``results.txt`` file.
+
+==============================================  ==============  ===============  ==================
+Task                                            Availability    Response time    Transaction rate
+----------------------------------------------  --------------  ---------------  ------------------
+fab run_server:1                                94.25 %         1.97 secs        3.55 trans/sec
+fab run_server:2                                100.00 %        7.02 secs        3.54 trans/sec
+fab run_server:2_group                          100.00 %        0.28 secs        88.17 trans/sec
+fab run_server:3                                100.00 %        1.75 secs        14.24 trans/sec
+fab run_server:4                                100.00 %        1.75 secs        14.25 trans/sec
+fab run_server:2,network_async_local            100.00 %        0.04 secs        571.82 trans/sec
+fab run_server:3,network_sync_local             100.00 %        0.08 secs        307.46 trans/sec
+fab run_server:4,network_sync_local             96.26 %         0.05 secs        492.88 trans/sec
+fab run_server:2,network_async_external         100.00 %        0.47 secs        53.64 trans/sec
+fab run_server:3,network_sync_external          100.00 %        1.65 secs        14.69 trans/sec
+fab run_server:4,network_sync_external          100.00 %        1.00 secs        24.96 trans/sec
+fab run_server:2,network_https_async            100.00 %        0.88 secs        28.26 trans/sec
+fab run_server:3,network_https_sync             100.00 %        2.42 secs        10.31 trans/sec
+fab run_server:4,network_https_sync             100.00 %        2.21 secs        11.27 trans/sec
+fab run_server:2,network_https_cpu_bound_async  98.43 %         29.20 secs       0.84 trans/sec
+fab run_server:3,network_https_cpu_bound_sync   100.00 %        35.57 secs       0.68 trans/sec
+fab run_server:4,network_https_cpu_bound_sync   100.00 %        16.44 secs       1.50 trans/sec
+fab run_server:2,file_async                     100.00 %        0.93 secs        26.98 trans/sec
+fab run_server:3,file_sync                      100.00 %        0.57 secs        43.58 trans/sec
+fab run_server:4,file_sync                      100.00 %        0.55 secs        45.14 trans/sec
+==============================================  ==============  ===============  ==================
 
 A short conclusion is that ``multiprocessing`` approach shows more or less similar results comparing
 to ``threading`` approach, outperforming in some cases, while underperforming in another cases. It seems
