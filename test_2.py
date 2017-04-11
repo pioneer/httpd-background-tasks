@@ -5,6 +5,7 @@ import tornado.web
 from tornado import gen
 import settings
 import tasks
+import memory_utils
 
 
 try:
@@ -19,6 +20,7 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", UserHandler),
+            (r"/resources/", ResourceHandler),
         ]
         tornado.web.Application.__init__(self, handlers)
 
@@ -29,6 +31,14 @@ class UserHandler(tornado.web.RequestHandler):
     def get(self):
         res = yield task()
         self.write(settings.TEMPLATE)
+        self.finish()
+
+
+class ResourceHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        memory = memory_utils.get_memory_string()
+        self.write(memory)
         self.finish()
 
 

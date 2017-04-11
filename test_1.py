@@ -3,6 +3,7 @@ import SimpleHTTPServer
 import SocketServer
 import settings
 import tasks
+import memory_utils
 
 try:
     task_name = sys.argv[1]
@@ -17,9 +18,15 @@ class SyncServer(SimpleHTTPServer.SimpleHTTPRequestHandler):
         pass
 
     def do_GET(self, *args, **kwargs):
-        task()
-        self.send_response(200, message=settings.TEMPLATE)
+        if self.path == "/":
+            task()
+            content = settings.TEMPLATE
+        else:
+            content = memory_utils.get_memory_string()
+        self.send_response(200)
         self.end_headers()
+        self.wfile.write(content)
+        return
 
 
 def run():

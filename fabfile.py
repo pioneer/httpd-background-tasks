@@ -36,11 +36,11 @@ def run_all_load_tests():
         return availability, response_time, transaction_rate
 
     TESTS = [
-             "1",
-             "2",
-             "2_group",
-             "3",
-             "4",
+            "1",
+            "2",
+            "2_group",
+            "3",
+            "4",
             ("2", "network_async_local"),
             ("3", "network_sync_local"),
             ("4", "network_sync_local"),
@@ -78,12 +78,15 @@ def run_all_load_tests():
         out = local(LOAD_TEST_CMD, capture=True)
         print out.stderr
         availability, response_time, transaction_rate = parse_siege_output(out.stderr)
+        print
+        memory = local("curl http://127.0.0.1:%s/resources/" % settings.PORT, capture=True)
+        print "Memory peak consumption: %s\n" % memory
         summary = [fab_command,
                    availability,
                    response_time,
-                   transaction_rate]
+                   transaction_rate,
+                   memory]
         SUMMARY.append(summary)
-        print "\n"
         try:
             current_process = psutil.Process()
             children = current_process.children(recursive=True)
@@ -93,4 +96,4 @@ def run_all_load_tests():
         except OSError as e:
             print e
         time.sleep(2)  # Waiting for the server to terminate
-    print tabulate.tabulate(SUMMARY, headers=["Task", "Availability", "Response time", "Transaction rate"])
+    print tabulate.tabulate(SUMMARY, headers=["Task", "Availability", "Response time", "Transaction rate", "Memory peak consumption"])
