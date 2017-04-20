@@ -62,6 +62,12 @@ def run_all_load_tests():
             ("2", "file_async"),
             ("3", "file_sync"),
             ("4", "file_sync")
+            ("2", "simplehash_async"),
+            ("3", "simplehash_sync"),
+            ("4", "simplehash_sync"),
+            ("2", "checksum_async"),
+            ("3", "checksum_sync"),
+            ("4", "checksum_sync"),
            ]
     SUMMARY = []
     for test in TESTS:

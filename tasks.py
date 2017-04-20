@@ -2,12 +2,14 @@ import os
 import time
 import random
 import tempfile
+import uuid
 from tornado import gen
 from tornado.concurrent import Future, return_future
 from tornado.httpclient import AsyncHTTPClient, HTTPResponse
 from tornado_retry_client import RetryClient
 import requests
 import feedparser
+from checksum import SimpleHash, CheckSumString
 
 
 class User(object):
@@ -178,6 +180,39 @@ def file_sync():
 def file_async(callback=None):
     file()
     callback()
+
+
+def simplehash():
+    sh = SimpleHash()
+    hash_a = sh.compute_hash("TEST_VALUE")
+    enc_hash_a = sh.protect_hash(b'0' * 20)
+    dec_hash = sh.unprotect_hash(enc_hash_a)
+    return dec_hash
+
+
+def simplehash_sync():
+    return simplehash()
+
+
+@gen.coroutine
+def simplehash_async():
+    raise gen.Return(simplehash())
+
+
+def checksum():
+    csum = CheckSumString()
+    checksum = csum.get("TEST_VALUE")
+    result = csum.verify("TEST_VALUE", checksum)
+    return result
+
+
+def checksum_sync():
+    return checksum()
+
+
+@gen.coroutine
+def checksum_async():
+    raise gen.Return(checksum())
 
 
 def get_task(name):

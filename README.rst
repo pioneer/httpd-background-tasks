@@ -75,7 +75,56 @@ fab run_server:4,network_https_cpu_bound_sync      100.00 %        15.79 secs   
 fab run_server:2,file_async                        100.00 %        0.93 secs        26.96 trans/sec     82.66 MB
 fab run_server:3,file_sync                         100.00 %        0.54 secs        46.29 trans/sec     430.47 MB
 fab run_server:4,file_sync                         100.00 %        0.53 secs        46.86 trans/sec     1486.58 MB
+fab run_server:2,simplehash_async                  100.00 %        0.02 secs        1348.81 trans/sec   84.67 MB
+fab run_server:3,simplehash_sync                   100.00 %        0.02 secs        1080.52 trans/sec   432.38 MB
+fab run_server:4,simplehash_sync                   100.00 %        0.03 secs        888.72 trans/sec    1503.98 MB
+fab run_server:2,checksum_async                    100.00 %        0.02 secs        1302.62 trans/sec   84.97 MB
+fab run_server:3,checksum_sync                     100.00 %        0.02 secs        1029.04 trans/sec   432.38 MB
+fab run_server:4,checksum_sync                     100.00 %        0.03 secs        938.13 trans/sec    1503.48 MB
 =================================================  ==============  ===============  ==================  =========================
+
+Below are also the additional results for simplehash and checksum tests, which are CPU-bound, for the approaches 2, 3 and 3, using different
+load of 25, 254 and 512 concurrent connections. The results below show that single-threaded async approach (2) may slightly lack in
+availability, but still shows the least memory consumption and number of transactions per second. Full results of those additional tests
+are in `results_by_load.txt` file.
+
+**25 concurrent users:**
+
+=================================  ==============  ===============  ==================  =========================
+Task                               Availability    Response time    Transaction rate    Memory peak consumption
+---------------------------------  --------------  ---------------  ------------------  -------------------------
+fab run_server:2,simplehash_async  100.00 %        0.02 secs        1348.81 trans/sec   84.67 MB
+fab run_server:3,simplehash_sync   100.00 %        0.02 secs        1080.52 trans/sec   432.38 MB
+fab run_server:4,simplehash_sync   100.00 %        0.03 secs        888.72 trans/sec    1503.98 MB
+fab run_server:2,checksum_async    100.00 %        0.02 secs        1302.62 trans/sec   84.97 MB
+fab run_server:3,checksum_sync     100.00 %        0.02 secs        1029.04 trans/sec   432.38 MB
+fab run_server:4,checksum_sync     100.00 %        0.03 secs        938.13 trans/sec    1503.48 MB
+
+**254 concurrent users:**
+
+=================================  ==============  ===============  ==================  =========================
+Task                               Availability    Response time    Transaction rate    Memory peak consumption
+---------------------------------  --------------  ---------------  ------------------  -------------------------
+fab run_server:2,simplehash_async  99.96 %         0.14 secs        1406.74 trans/sec   84.97 MB
+fab run_server:3,simplehash_sync   100.00 %        0.24 secs        1036.44 trans/sec   434.34 MB
+fab run_server:4,simplehash_sync   100.00 %        0.28 secs        894.23 trans/sec    1579.00 MB
+fab run_server:2,checksum_async    99.96 %         0.15 secs        1351.51 trans/sec   88.35 MB
+fab run_server:3,checksum_sync     100.00 %        0.25 secs        1014.14 trans/sec   386.48 MB
+fab run_server:4,checksum_sync     100.00 %        0.28 secs        906.38 trans/sec    1581.09 MB
+=================================  ==============  ===============  ==================  =========================
+
+**512 concurrent users:**
+
+=================================  ==============  ===============  ==================  =========================
+Task                               Availability    Response time    Transaction rate    Memory peak consumption
+---------------------------------  --------------  ---------------  ------------------  -------------------------
+fab run_server:2,simplehash_async  99.77 %         0.14 secs        1389.71 trans/sec   84.98 MB
+fab run_server:3,simplehash_sync   100.00 %        0.52 secs        982.19 trans/sec    432.38 MB
+fab run_server:4,simplehash_sync   100.00 %        0.59 secs        864.74 trans/sec    1578.28 MB
+fab run_server:2,checksum_async    99.75 %         0.14 secs        1313.62 trans/sec   84.96 MB
+fab run_server:3,checksum_sync     100.00 %        0.54 secs        951.92 trans/sec    432.38 MB
+fab run_server:4,checksum_sync     100.00 %        0.60 secs        853.08 trans/sec    1579.90 MB
+=================================  ==============  ===============  ==================  =========================
 
 Observations:
 -------------
