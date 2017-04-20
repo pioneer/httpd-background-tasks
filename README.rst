@@ -99,6 +99,7 @@ fab run_server:4,simplehash_sync   100.00 %        0.03 secs        888.72 trans
 fab run_server:2,checksum_async    100.00 %        0.02 secs        1302.62 trans/sec   84.97 MB
 fab run_server:3,checksum_sync     100.00 %        0.02 secs        1029.04 trans/sec   432.38 MB
 fab run_server:4,checksum_sync     100.00 %        0.03 secs        938.13 trans/sec    1503.48 MB
+=================================  ==============  ===============  ==================  =========================
 
 **254 concurrent users:**
 
